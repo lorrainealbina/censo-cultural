@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Censo Cultural de Uberlândia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative min-h-screen bg-gray-900 text-gray-900">
+
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center z-0"
+       style="background-image: url('image.png');"></div>
+
+  <!-- Overlay branco com transparência -->
+  <div class="absolute inset-0 bg-white bg-opacity-80 z-10"></div>
+
+  <!-- Conteúdo -->
+  <main class="relative z-20 flex flex-col items-center justify-center min-h-screen p-6 text-center transition-all" id="content">
+    <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-xl max-w-2xl w-full">
+      <h1 class="text-2xl font-bold text-blue-700">🎓 Censo Municipal sobre as Políticas Culturais de Uberlândia</h1>
+
+      <p class="mt-4 text-gray-700">
+        Esta pesquisa é realizada por <strong>Lorraine Albina Tomaz</strong>, vinculada ao programa de <strong>Pós-graduação em Artes Cênicas</strong> da <strong>UFU</strong>.
+      </p>
+
+      <h2 class="mt-6 text-lg font-semibold text-gray-800">📋 Por que sua participação é importante?</h2>
+      <p class="text-gray-600">
+        Sua contribuição é essencial para entender os acertos, desafios e ausências das políticas culturais. Os dados coletados poderão subsidiar melhorias.
+      </p>
+
+      <h2 class="mt-6 text-lg font-semibold text-gray-800">🔐 Confidencialidade e tempo</h2>
+      <p class="text-gray-600">
+        O questionário é <strong>anônimo</strong> e leva cerca de <strong>5 minutos</strong> para ser preenchido.
+      </p>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJm2SkXRaIett4J7NI8C0iRCqNt6kHngHm3BXO29aaRmAS6A/viewform?usp=header"
+         target="_blank"
+         class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition">
+        ➡️ Responder ao Questionário
+      </a>
+
+      <p class="mt-4 text-sm text-gray-500">
+        <strong>Dúvidas?</strong> Fale comigo:<br>
+        Lorraine Albina Tomaz – <a href="mailto:lorraine.tomaz@ufu.br" class="text-blue-500">lorraine.tomaz@ufu.br</a><br>
+        Instagram: <a href="https://instagram.com/lorraine.albina" class="text-blue-500">@lorraine.albina</a>
+      </p>
+    </div>
+
+    <!-- Botão de acessibilidade -->
+    <button onclick="toggleAccessibility()" 
+            class="mt-4 bg-black text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 shadow">
+      🔍 Ativar Modo Acessível
+    </button>
+  </main>
+
+  <!-- Script para acessibilidade -->
+  <script>
+    let accessible = false;
+    function toggleAccessibility() {
+      accessible = !accessible;
+      const content = document.getElementById('content');
+      if (accessible) {
+        content.classList.add("text-lg");
+        content.classList.add("contrast-150");
+      } else {
+        content.classList.remove("text-lg");
+        content.classList.remove("contrast-150");
+      }
+    }
+  </script>
+
+</body>
+</html>
